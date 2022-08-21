@@ -56,6 +56,14 @@ Array(200).fill().forEach(addStar);
 const spaceTexture = new THREE.TextureLoader().load('space.jpg');
 scene.background = spaceTexture;
 
+const myphotoTexture = new THREE.TextureLoader().load('mygithubpic.jpg');
+const myphoto = new THREE.Mesh(
+  new THREE.BoxGeometry(3,3,3),
+  new THREE.MeshBasicMaterial( { map: myphotoTexture } )
+);
+scene.add(myphoto);
+
+
 function animate() {
   requestAnimationFrame( animate );
 
